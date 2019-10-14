@@ -85,7 +85,7 @@
   <div class="form-label-group d-flex justify-content-center">
     <div class="col-xs-2 w-50">
       <label for="inputPassword">Password</label>
-      <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required autofocus>
+      <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required autofocus>
     </div>
   </div>
   <br>
