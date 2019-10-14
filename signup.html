@@ -25,7 +25,7 @@
   <body>
   <nav class="navbar navbar-expand-md navbar-dark bg-info mb-4">
       <div class = "logo-wp">
-          <a href="#" class="navbar-brand logo"><img class="logo-image" src="/ECT/images/ect_pc_logo1.png"></a> 
+          <a href="/ECT/index.html" class="navbar-brand logo"><img class="logo-image" src="/ECT/images/ect_pc_logo1.png"></a> 
                   <!--<img src="/images/ect_pc_logo" class="img-fluid"> -->   
           <b class="navbar-brand" href="#"> Wedding Planning</b>
         </div>
@@ -85,7 +85,7 @@
   <div class="form-label-group d-flex justify-content-center">
     <div class="col-xs-2 w-50">
       <label for="inputPassword">Password</label>
-      <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required autofocus>
+      <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required autofocus>
     </div>
   </div>
   <br>
@@ -93,7 +93,7 @@
   <div class="form-label-group d-flex justify-content-center">
     <div class="col-xs-2 w-50">
       <label for="inputAddress">Address</label>
-        <input type="text" name="address" id="inputAddress" class="form-control" placeholder="Street Address" required autofocus>
+        <input type="text" name="address" id="inputAddress" class="form-control" placeholder="Street Address" pattern="(\d{1,5}\s\(\b\w*\b\s){1,2}\w*\.){5, 50}" title="Please enter a valid street address" required autofocus>
         <br>
 
         <input type="text" name="city" id="inputCity" class="form-control" placeholder="City" required autofocus>
