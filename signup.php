@@ -16,6 +16,8 @@ $bd = $_POST["day"];
 $by = $_POST["year"];
 $query = "INSERT INTO users VALUES ('$fn', '$ln', '$em', '$pw', '$ad', '$ct', '$st', '$zc', '$bd', '$bm', '$by')";
 $result = pg_query($query); 
+header('Location: /ECT/success.html');
 ?>
+
 </body>
 </html>
