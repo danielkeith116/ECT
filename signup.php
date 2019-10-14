@@ -15,13 +15,19 @@ $bm = $_POST["month"];
 $bd = $_POST["day"];
 $by = $_POST["year"];
 $h_pw = password_hash($pw, PASSWORD_DEFAULT);
-$query = "INSERT INTO users VALUES ('$fn', '$ln', '$em', '$h_pw', '$ad', '$ct', '$st', '$zc', '$bd', '$bm', '$by')";
-$result = pg_query($query);
-#$query = "select * from users where users.email = $em";
-#$tquery = "DECLARE @return BIT = 0; IF EXISTS (SELECT 1 FROM users WHERE users.email = dmk3pc@virgina.edu) SET @return = 1;"
-#$tresult = pg_query($tquery);
-#echo $tresult;
-header('Location: /ECT/success.html');
+$tquery = "select * from users where users.email = $em";
+$tresult = pg_query($tquery);
+$numrows = pg_num_rows($tresult);
+if ($numrows = 0)
+{
+	$query = "INSERT INTO users VALUES ('$fn', '$ln', '$em', '$h_pw', '$ad', '$ct', '$st', '$zc', '$bd', '$bm', '$by')";
+	$result = pg_query($query);
+	header('Location: /ECT/success.html');
+}
+else 
+{
+	header('Location: /ECT/failure.html');
+}
 ?>
 </body>
 </html>
