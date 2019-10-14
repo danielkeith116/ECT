@@ -28,12 +28,6 @@ else
 {
 	header('Location: /ECT/failure.html');
 }
-
-
-#$tquery = "DECLARE @return BIT = 0; IF EXISTS (SELECT 1 FROM users WHERE users.email = dmk3pc@virgina.edu) SET @return = 1;"
-
-#echo $tresult;
-
 ?>
 </body>
 </html>
