@@ -15,8 +15,9 @@ $bm = $_POST["month"];
 $bd = $_POST["day"];
 $by = $_POST["year"];
 $h_pw = password_hash($pw, PASSWORD_DEFAULT);
+#$query = "select * from users where users.email = $em";	
 $query = "INSERT INTO users VALUES ('$fn', '$ln', '$em', '$h_pw', '$ad', '$ct', '$st', '$zc', '$bd', '$bm', '$by')";
-$result = pg_query($db_c, $query); 
+$result = pg_query($query);
 ?>
 </body>
 </html>
