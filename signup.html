@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -186,7 +186,7 @@
       <select class="form-control" name="day" id="day" required autofocus>
        <script>
           var options = "";
-          options += "<option selected disabled>Day</option>"
+          options += "<option value=\"\" selected disabled>Day</option>"
           for (var day = 1; day <= 31; day++)
             options += "<option>" + day + "</option>";
           document.getElementById("day").innerHTML = options;
@@ -199,7 +199,7 @@
           var start = 1900;
           var end = new Date().getFullYear() - 18;
           var options = "";
-          options += "<option selected disabled>Year</option>"
+          options += "<option value=\"\" selected disabled>Year</option>"
           for (var year = start; year <= end; year++)
             options += "<option>" + year + "</option>";
           document.getElementById("year").innerHTML = options;
