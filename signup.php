@@ -14,8 +14,9 @@ $zc = $_POST["zipcode"];
 $bm = $_POST["month"];
 $bd = $_POST["day"];
 $by = $_POST["year"];
-$query = "INSERT INTO users VALUES ('$fn', '$ln', '$em', '$pw', '$ad', '$ct', '$st', '$zc', '$bd', '$bm', '$by')";
-$result = pg_query($query); 
+$h_pw = password_hash($pw, PASSWORD_DEFAULT);
+$query = "INSERT INTO users VALUES ('$fn', '$ln', '$em', '$h_pw', '$ad', '$ct', '$st', '$zc', '$bd', '$bm', '$by')";
+$result = pg_query($db_c, $query); 
 ?>
 </body>
 </html>
