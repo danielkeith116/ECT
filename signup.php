@@ -14,10 +14,10 @@ $zc = $_POST["zipcode"];
 $bm = $_POST["month"];
 $bd = $_POST["day"];
 $by = $_POST["year"];
-$query = "INSERT INTO users VALUES ('$fn', '$ln', '$em', '$pw', '$ad', '$ct', '$st', '$zc', '$bd', '$bm', '$by')";
-$result = pg_query($query); 
-header('Location: /ECT/success.html');
+$h_pw = password_hash($pw, PASSWORD_DEFAULT);
+#$query = "select * from users where users.email = $em";	
+$query = "INSERT INTO users VALUES ('$fn', '$ln', '$em', '$h_pw', '$ad', '$ct', '$st', '$zc', '$bd', '$bm', '$by')";
+$result = pg_query($query);
 ?>
-
 </body>
 </html>
