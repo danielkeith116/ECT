@@ -18,7 +18,7 @@ $h_pw = password_hash($pw, PASSWORD_DEFAULT);
 $tquery = "select * from users where users.email = $em";
 $tresult = pg_query($tquery);
 $numrows = pg_num_rows($tresult);
-if ($numrows = 0)
+if ($numrows == 0)
 {
 	$query = "INSERT INTO users VALUES ('$fn', '$ln', '$em', '$h_pw', '$ad', '$ct', '$st', '$zc', '$bd', '$bm', '$by')";
 	$result = pg_query($query);
