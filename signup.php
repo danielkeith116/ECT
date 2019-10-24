@@ -28,6 +28,21 @@ else
 {
 	header('Location: /ECT/failure.html');
 }
+//send email upon signup
+require 'PHPMailerAutoload.php';
+$mail = new PHPMailer;
+$mail->setFrom('thePersistentCookies@gmail.com', 'Crazy Cookies');
+$mail->Username = 'thePersistentCookies@gmail.com';
+$mail->Password = 'Uvaistheb3st!';
+$mail->addAddress($em, $fn);
+$mail->Subject  = "You've Successfully Signed Up!";
+$mail->Body     = 'Welcome to the Persistent Cookies Wedding Planning Services!';
+if(!$mail->send()) {
+  echo 'Message was not sent.';
+  echo 'Mailer error: ' . $mail->ErrorInfo;
+} else {
+  echo 'Message has been sent.';
+}
 ?>
 </body>
 </html>
