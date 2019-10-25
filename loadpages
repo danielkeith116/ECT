@@ -1,0 +1,7 @@
+<html>
+<body>
+<?php
+header('Location: /ECT/about.html');
+?>
+</body>
+</html>
