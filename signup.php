@@ -29,25 +29,28 @@ if ($numrows == 0)
 	$query = "INSERT INTO users VALUES ('$fn', '$ln', '$em', '$h_pw', '$ad', '$ct', '$st', '$zc', '$bd', '$bm', '$by')";
 	$result = pg_query($query);
 	//send email upon signup
-$mail = new PHPMailer;
-$mail->isSMTP();
-$mail->SMTPDebug = SMTP::DEBUG_SERVER;
-$mail->Host = 'smtp.gmail.com';
-$mail->Port = 587;
-$mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-$mail->SMTPAuth = true;
-$mail->setFrom('thePersistentCookies@gmail.com', 'Crazy Cookies');
-$mail->Username = 'thePersistentCookies@gmail.com';
-$mail->Password = 'Uvaistheb3st!';
-$mail->addAddress($em, $fn);
-$mail->Subject  = "You've Successfully Signed Up!";
-$mail->Body     = 'Welcome to the Persistent Cookies Wedding Planning Services!';
-if(!$mail->send()) {
-  echo 'Message was not sent.';
-  echo 'Mailer error: ' . $mail->ErrorInfo;
-} else {
-  echo 'Message has been sent.';
-}
+	$mail = new PHPMailer;
+	$mail->isSMTP();
+	$mail->SMTPDebug = SMTP::DEBUG_SERVER;
+	$mail->Host = 'smtp.gmail.com';
+	$mail->Port = 587;
+	$mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+	$mail->SMTPAuth = true;
+	$mail->setFrom('thePersistentCookies@gmail.com', 'Crazy Cookies');
+	$mail->Username = 'thePersistentCookies@gmail.com';
+	$mail->Password = 'Uvaistheb3st!';
+	$mail->addAddress($em, $fn);
+	$mail->Subject  = "You've Successfully Signed Up!";
+	$mail->Body     = 'Welcome to the Persistent Cookies Wedding Planning Services!';
+	if(!$mail->send()) 
+	{
+	  echo 'Message was not sent.';
+	  echo 'Mailer error: ' . $mail->ErrorInfo;
+	} 
+	else 
+	{
+	  echo 'Message has been sent.';
+	}
 	header('Location: /ECT/success.html');
 }
 else 
