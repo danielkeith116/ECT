@@ -66,13 +66,13 @@
   </div>
   
   <div class="text-center mb-4">
-        <h5 class="warning">The full planning package; includes venue, decorations, invitations, rentals, catering, cake, flowers, <br> and anything else you might need to make your day special.</h5>
+        <h5 class="warning">This package includes everything from the full planning package, but we've already got you started with some suggestions for venue and officiator. Getting your Real Community involved in your wedding is our Real Responsibility!</h5>
   </div>
 
   <!-- name, wedding date, wedding venue, pinterest board link, message -->
   <div class="form-label-group d-flex justify-content-center">
     <div class="col-xs-2 w-50">
-      <label for="inputName">Name</label>
+      <label for="inputName">Name*</label>
       <input type="text" name="fName" id="inputFirstName" class="form-control" placeholder="First Name" pattern="[A-Za-z]*" title="Please enter only letters" required autofocus>
         <br>
       <input type="text" name="lName" id="inputLastName" class="form-control" placeholder="Last Name" pattern="[A-Za-z]*" title="Please enter only letters" required autofocus>
@@ -89,9 +89,9 @@
         <br>
   <div class="form-group d-flex justify-content-center">
         <div class="col-xs-2 w-50">
-          <label for="month">Date Departing:</label>
+          <label for="month">Wedding Date</label>
           <select class="form-control" name="month" id="month" required autofocus>
-              <option value="" selected disabled>Month</option>
+              <option value="" selected disabled>Month*</option>
               <option value="1">January</option>
               <option value="2">February</option>
               <option value="3">March</option>
@@ -109,7 +109,8 @@
             <select class="form-control" name="day" id="dayD" required autofocus>
              <script>
                 var options = "";
-                options += "<option selected disabled>Day</option>"
+                options += "<option value=\"\" selected disabled>Day*</option>"
+				options += "<option value=\"0\">Unknown</option>";
                 for (var day = 1; day <= 31; day++)
                   options += "<option>" + day + "</option>";
                 document.getElementById("dayD").innerHTML = options;
@@ -122,7 +123,7 @@
                 var start = 2019;
                 var end = new Date().getFullYear() + 1;
                 var options = "";
-                options += "<option selected disabled>Year</option>"
+                options += "<option value=\"\" selected disabled>Year*</option>"
                 for (var year = start; year <= end; year++)
                   options += "<option>" + year + "</option>";
                 document.getElementById("yearD").innerHTML = options;
@@ -136,13 +137,13 @@
   <div class="form-label-group d-flex justify-content-center">
     <div class="col-xs-2 w-50">
       <label for="inputVenue">Wedding Venue
-      <select class="form-control" name="venue" id="venue" required autofocus>
+      <select class="form-control" name="venue" id="venue" autofocus>
 	  <option value="" selected disabled>Venue</option>
-              <option value="1">McCleod</option>
-              <option value="2">City Church</option>
-              <option value="3">City Church Central</option>
-			  <option value="4">UBC</option>
-              <option value="5">Other (specify in message)</option>
+              <option>McCleod</option>
+              <option>City Church</option>
+              <option>City Church Central</option>
+			  <option>UBC</option>
+              <option>Other (specify in message)</option>
 	  
             </select>
     </div>
@@ -151,15 +152,15 @@
 
   <div class="form-label-group d-flex justify-content-center">
       <div class="col-xs-2 w-50">
-        <label for="inputPinterest">Link to Pinterest Board
+        <label for="inputPinterest">Officiator
         </label>
-      <select class="form-control" name="link" id="inputPinterest" required autofocus>
+      <select class="form-control" name="link" id="inputPinterest" autofocus>
               <option value="" selected disabled>Officiator</option>
-              <option value="1">Pete Bullette</option>
-              <option value="2">Josh Moran</option>
-              <option value="3">Sarah Fletcher</option>
-			  <option value="4" disabled>Christopher Cole (coming soon!)</option>
-              <option value="5">Other (specify in message)</option>
+              <option>Pete Bullette</option>
+              <option>Josh Moran</option>
+              <option>Sarah Fletcher</option>
+			  <option disabled>Christopher Cole (coming soon!)</option>
+              <option>Other (specify in message)</option>
             </select>
 	  </div>
     </div>
@@ -168,7 +169,7 @@
   <div class="form-label-group d-flex justify-content-center">
       <div class="col-xs-2 w-50">
         <label for="inputMessage">Message</label>
-        <input type="Message" name = "message" id="inputMessage" class="form-control" placeholder="Message: Bible verses to include in the sermon, other venue or officiator options" required autofocus>
+        <input type="Message" name = "message" id="inputMessage" class="form-control" placeholder="Bible verses from your Real Devotional Life to include in the sermon, other notes" autofocus>
       </div>
     </div>
       <br>
