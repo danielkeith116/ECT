@@ -69,10 +69,10 @@
         <h5 class="warning">The full planning package; includes venue, decorations, invitations, rentals, catering, cake, flowers, <br> and anything else you might need to make your day special.</h5>
   </div>
 
-  <!-- name, wedding date, wedding venue, pinterest board link, message -->
-  <div class="form-label-group d-flex justify-content-center">
+ <!-- name, wedding date, wedding venue, pinterest board link, message -->
+ <div class="form-label-group d-flex justify-content-center">
     <div class="col-xs-2 w-50">
-      <label for="inputName">Name</label>
+      <label for="inputName">Name*</label>
       <input type="text" name="fName" id="inputFirstName" class="form-control" placeholder="First Name" pattern="[A-Za-z]*" title="Please enter only letters" required autofocus>
         <br>
       <input type="text" name="lName" id="inputLastName" class="form-control" placeholder="Last Name" pattern="[A-Za-z]*" title="Please enter only letters" required autofocus>
@@ -82,16 +82,16 @@
 
   <div class="form-label-group d-flex justify-content-center">
     <div class="col-xs-2 w-50">
-      <label for="inputEmail">Email address</label>
+      <label for="inputEmail">Email address*</label>
       <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email address" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,63}$" title="Please enter a valid email address with an @ and ." required autofocus>
     </div>
   </div>
         <br>
   <div class="form-group d-flex justify-content-center">
         <div class="col-xs-2 w-50">
-          <label for="month">Date Departing:</label>
+          <label for="month">Wedding Date</label>
           <select class="form-control" name="month" id="month" required autofocus>
-              <option value="" selected disabled>Month</option>
+              <option value="" selected disabled>Month*</option>
               <option value="1">January</option>
               <option value="2">February</option>
               <option value="3">March</option>
@@ -106,7 +106,7 @@
               <option value="12">December</option>
             </select>
             <br>
-            <select class="form-control" name="day" id="dayD" required autofocus>
+            <select class="form-control" name="day" id="dayD" autofocus>
              <script>
                 var options = "";
                 options += "<option selected disabled>Day</option>"
@@ -122,7 +122,7 @@
                 var start = 2019;
                 var end = new Date().getFullYear() + 1;
                 var options = "";
-                options += "<option selected disabled>Year</option>"
+                options += "<option selected disabled>Year*</option>"
                 for (var year = start; year <= end; year++)
                   options += "<option>" + year + "</option>";
                 document.getElementById("yearD").innerHTML = options;
@@ -137,7 +137,7 @@
     <div class="col-xs-2 w-50">
       <label for="inputVenue">Wedding Venue
       </label>
-      <input type="text" name="venue" id="inputVenue" class="form-control" placeholder="Wedding Venue" pattern="[A-Za-z]*" title="Must contain only letters." required autofocus>
+      <input type="text" name="venue" id="inputVenue" class="form-control" placeholder="Wedding Venue" pattern="[A-Za-z]*" title="Must contain only letters."  autofocus>
     </div>
   </div>
   <br>
@@ -154,7 +154,7 @@
   <div class="form-label-group d-flex justify-content-center">
       <div class="col-xs-2 w-50">
         <label for="inputMessage">Message</label>
-        <input type="Message" name = "message" id="inputMessage" class="form-control" placeholder="Message" required autofocus>
+        <input type="Message" name = "message" id="inputMessage" class="form-control" placeholder="Message"  autofocus>
       </div>
     </div>
       <br>
@@ -171,7 +171,3 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </body>
 </html>
-
-
-
-
