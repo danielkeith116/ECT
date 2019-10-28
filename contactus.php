@@ -7,7 +7,8 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 require 'vendor/autoload.php';
-
+$db_c = pg_connect("host=ec2-174-129-218-200.compute-1.amazonaws.com	 port = 5432 dbname=d1taisgtq9v2u6 user=lwaasictcokjps 
+password=7cc9f025cacf299ba7640082a90881e65a38903fc048e3dd326700b7ebf3db8f");
 $name = $_POST["inputName"];
 $email = $_POST["email"];
 $message = $_POST["message"];
@@ -26,7 +27,8 @@ if(!$mail->send()) {
 } else {
   echo 'Message has been sent.';
 }*/
-
+$query = "INSERT INTO feedback VALUES ('$name', '$email', '$message')";
+$result = pg_query($query);
 $mail = new PHPMailer;
 $mail->isSMTP();
 $mail->SMTPDebug = SMTP::DEBUG_SERVER;
