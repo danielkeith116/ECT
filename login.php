@@ -1,10 +1,9 @@
 <?php
-	session_start();
+session_start();
 ?>
 
-<html>
-<body>
 <?php
+
 //use PHPMailer\PHPMailer\PHPMailer;
 //use PHPMailer\PHPMailer\Exception;
 //require 'vendor/autoload.php';
@@ -17,7 +16,8 @@ $em = $_POST["email"];
 $pw = $_POST["password"];
 $h_pw = password_hash($pw, PASSWORD_DEFAULT);
 $tquery = "select * from users where users.email = '$em'";
-$rows = pg_fetch_row($tquery);
+$result = pg_query($tquery);
+$rows = pg_fetch_row($result);
 if (!$rows)
 {
 	session_destroy();
@@ -26,19 +26,24 @@ if (!$rows)
 }
 else 
 {
-	if ($rows[3] == $h_pw)
+	/*echo $h_pw;
+	echo "<br>";
+	echo $rows[3]; 
+	echo "<br>";
+	$t = password_verify('$pw', $rows[3]);
+	if (!$t)
+	{echo "false";}*/
+	 if (password_verify($pw, $rows[3]))
 	{
-		$_SESSION["email"] = $em;
-		$_SESSION["password"] = $h_pw;
+		$_SESSION['email'] = '$em';
+		$_SESSION['password'] = '$h_pw';
 		header('Location: /ECT/success.html');
 	}
 	else
 	{
 		session_destroy();
 		header('Location: /ECT/failure.html');
-	}
+	} 
 }
 
 ?>
-</body>
-</html>
