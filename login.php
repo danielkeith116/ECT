@@ -37,7 +37,7 @@ else
 	{
 		$_SESSION['email'] = $em;
 		$_SESSION['password'] = $h_pw;
-		header('Location: /ECT/store.html'); //change to member dashboard
+		header('Location: /ECT/memberHome.php'); //change to member dashboard
 	}
 	else
 	{
