@@ -54,7 +54,7 @@ if ($numrows == 0)
 	{
 	  echo 'Message has been sent.';
 	}
-	header('Location: /ECT/success.html'); //redirect to member home page
+	header('Location: /ECT/memberHome.php'); 
 }
 else 
 {
