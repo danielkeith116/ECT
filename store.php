@@ -2,7 +2,7 @@
 session_start();
 if (!isset($_SESSION['email']))
 {	
-	header('Location: /ECT/login.html');
+	header('Location: /ECT/login.php');
 }
 ?>
 <html lang="en">
@@ -91,11 +91,11 @@ if (!isset($_SESSION['email']))
         <a class="nav-link" href="/ECT/about.html">About Us</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/ECT/signup.html">Sign Up</a>
+        <a class="nav-link" href="/ECT/signup.php">Sign Up</a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="/ECT/login.html">Log In</a>
+        <a class="nav-link" href="/ECT/login.php">Log In</a>
       </li>
 
       <li class="nav-item">
