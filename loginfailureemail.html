@@ -33,12 +33,15 @@
       }
       h1{
         font-family: 'Lobster';
-        color: rgb(23, 162, 184);
+        color: #b84517;
       }
       b{
         font-family: 'Dancing Script';
           color: black !important;
       }
+	  warn{
+		color: '#b84517'rgb(23, 162, 184);
+	  }
     </style>
     <!-- Custom styles for this template -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/floating-labels.css" rel="stylesheet">
@@ -73,7 +76,7 @@
         <a class="nav-link" href="/ECT/contactus.html">Contact Us</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/ECT/store.php">Store</a>
+        <a class="nav-link" href="/ECT/store.html">Store</a>
       </li>
     </ul>
 
@@ -82,7 +85,7 @@
     
   <div class="text-center mb-4">
     <img class="mb-4" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
-    <h1 class="h3 mb-3 font-weight-normal">Log In</h1>
+    <h1 class="h3 mb-3 warn font-weight-normal">That Email Address does not exist, Please Try Again</h1>
   </div>
 <form class="form-signin" action="login.php" method="post">
   <div class="form-label-group d-flex justify-content-center">
@@ -107,7 +110,6 @@
   <div class="d-flex justify-content-center">
     <input class="btn btn-lg btn-info btn-block w-25" type="submit" value="Sign In">
   </div>
-  <a class="btn btn-info" href="/ECT/logout.php" role="button">Log Out</a>
 
 
 </form>

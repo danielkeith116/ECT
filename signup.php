@@ -1,6 +1,7 @@
 <html>
 <body>
 <?php
+session_start();
 //use PHPMailer\PHPMailer\PHPMailer;
 //use PHPMailer\PHPMailer\Exception;
 //require 'vendor/autoload.php';
@@ -28,6 +29,8 @@ if ($numrows == 0)
 {
 	$query = "INSERT INTO users VALUES ('$fn', '$ln', '$em', '$h_pw', '$ad', '$ct', '$st', '$zc', '$bd', '$bm', '$by')";
 	$result = pg_query($query);
+	$_SESSION['email'] = '$em';
+	$_SESSION['password'] = '$h_pw';
 	//send email upon signup
 	$mail = new PHPMailer;
 	$mail->isSMTP();
@@ -51,10 +54,12 @@ if ($numrows == 0)
 	{
 	  echo 'Message has been sent.';
 	}
-	header('Location: /ECT/success.html');
+	header('Location: /ECT/success.html'); //redirect to member home page
 }
 else 
 {
+	session_unset();
+	session_destroy();
 	header('Location: /ECT/failure.html');
 }
 

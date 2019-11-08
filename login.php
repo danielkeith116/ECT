@@ -21,7 +21,7 @@ $rows = pg_fetch_row($result);
 if (!$rows)
 {
 	session_destroy();
-	header('Location: /ECT/loginfailure.html');
+	header('Location: /ECT/loginfailureemail.html');
 	
 }
 else 
@@ -35,14 +35,15 @@ else
 	{echo "false";}*/
 	 if (password_verify($pw, $rows[3]))
 	{
-		$_SESSION['email'] = '$em';
-		$_SESSION['password'] = '$h_pw';
-		header('Location: /ECT/success.html');
+		$_SESSION['email'] = $em;
+		$_SESSION['password'] = $h_pw;
+		header('Location: /ECT/success.html'); //change to member dashboard
 	}
 	else
 	{
+		session_unset();
 		session_destroy();
-		header('Location: /ECT/failure.html');
+		header('Location: /ECT/loginfailurepassword.html'); 
 	} 
 }
 
