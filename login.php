@@ -26,13 +26,6 @@ if (!$rows)
 }
 else 
 {
-	/*echo $h_pw;
-	echo "<br>";
-	echo $rows[3]; 
-	echo "<br>";
-	$t = password_verify('$pw', $rows[3]);
-	if (!$t)
-	{echo "false";}*/
 	 if (password_verify($pw, $rows[3]))
 	{
 		$_SESSION['email'] = $em;
