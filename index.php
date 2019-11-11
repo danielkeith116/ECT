@@ -160,7 +160,7 @@ session_start();
       <div class="mr-md-3 w-50">
         <h2>Who Are We?</h2>
         <p>Learn more about the Persistent Cookies <br> wedding planning here!</p>
-        <p><a class="btn btn-info" href="/ECT/about.html" role="button">About us &raquo;</a></p>
+        <p><a class="btn btn-info" href="/ECT/about.php" role="button">About us &raquo;</a></p>
       </div><!-- /.col-lg-4 -->
       <!-- <div class="col-lg-4">
         <h2>Shop for Bouquets</h2>
