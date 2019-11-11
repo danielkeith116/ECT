@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (!isset($_SESSION['email']))
+{
+	header('Location: /ECT/login.php');
+}
+?>
 <html>
 <body>
 <?php
@@ -9,6 +16,7 @@ use PHPMailer\PHPMailer\SMTP;
 require 'vendor/autoload.php';
 $db_c = pg_connect("host=ec2-174-129-218-200.compute-1.amazonaws.com	 port = 5432 dbname=d1taisgtq9v2u6 user=lwaasictcokjps 
 password=7cc9f025cacf299ba7640082a90881e65a38903fc048e3dd326700b7ebf3db8f");
+$wp = $_POST["package"];
 $fn = $_POST["fName"];
 $ln = $_POST["lName"];
 $em = $_POST["email"];
@@ -18,9 +26,28 @@ $wy = $_POST["year"];
 $vn = $_POST["venue"];
 $lk = $_POST["link"];
 $mg = $_POST["message"];
-$query = "INSERT INTO orders VALUES ('$fn', '$ln', '$em', '$wm', '$wd', '$wy', '$vn', '$lk', '$mg',0.00252,'ChiAlpha')";
+
+$pr = 0;
+$redirect = 'Location: /ECT/index.php';
+if ($wp == "All In")
+{
+    $pr = 0.003;
+    $redirect = 'Location: /ECT/allBitPay.php';
+}
+if ($wp == "Halfway")
+{
+    $pr = 0.002;
+    $redirect = 'Location: /ECT/halfBitPay.php';
+}
+if ($wp == "11th Hour")
+{
+    $pr = 0.001;
+    $redirect = 'Location: /ECT/11BitPay.php';
+}
+$query = "INSERT INTO orders VALUES ('$fn', '$ln', '$em', '$wm', '$wd', '$wy', '$vn', '$lk', '$mg','$pr','$wp')";
 $result = pg_query($query);
-header('Location: /ECT/xaBitPay.html');
+$_SESSION['checkout'] = 'Supreme Leader';
+header($redirect);
 
 ?>
 </body>

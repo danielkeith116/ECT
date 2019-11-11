@@ -100,7 +100,7 @@ session_start();
     
   <div class="text-center mb-4">
     <img class="mb-4" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
-    <h1 class="h3 mb-3 warn font-weight-normal">That Email Address does not exist, Please Try Again</h1>
+    <h1 class="h3 mb-3 warn font-weight-normal">Incorrect Credentials, Please Try Again</h1>
   </div>
 <form class="form-signin" action="verifylogin.php" method="post">
   <div class="form-label-group d-flex justify-content-center">
@@ -128,6 +128,16 @@ session_start();
 
 
 </form>
+<br>
+<hr>
+<div class="d-flex justify-content-center">
+<p>Don't have an account?</p>
+</div>
+<div class="d-flex justify-content-center">
+<p><a class="btn btn-info" href="/ECT/signup.php" role="button">Register Now</a></p>
+</div>
+
+
  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
