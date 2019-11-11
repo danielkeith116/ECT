@@ -201,7 +201,7 @@ if (!isset($_SESSION['email']))
         <div class="col-xs-2 w-50">
           <label for="inputVenue">Wedding Venue
           </label>
-          <input type="text" name="venue" id="inputVenue" class="form-control" placeholder="Wedding Venue" pattern="[A-Za-z]*" title="Must contain only letters."  autofocus>
+          <input type="text" name="venue" id="inputVenue" class="form-control" placeholder="Wedding Venue" pattern="[A-Za-z '\-]*" title="Must contain only letters, spaces, dashes, or apostrophes"  autofocus>
         </div>
       </div>
       <br>
