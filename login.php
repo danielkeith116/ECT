@@ -54,7 +54,7 @@ if (isset($_SESSION['email']))
   <body>
         <nav class="navbar navbar-expand-md navbar-dark bg-info mb-4">
       <div class = "logo-wp">
-          <a href="/ECT/index.html" class="navbar-brand logo"><img class="logo-image" src="/ECT/images/ect_pc_logo1.png"></a> 
+          <a href="/ECT/index.php" class="navbar-brand logo"><img class="logo-image" src="/ECT/images/ect_pc_logo1.png"></a> 
                   <!--<img src="/images/ect_pc_logo" class="img-fluid"> -->   
           <b class="navbar-brand" href="#"> Wedding Planning</b>
         </div>
