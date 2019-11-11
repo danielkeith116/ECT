@@ -5,6 +5,7 @@ if (!isset($_SESSION['email']))
 	header('Location: /ECT/login.php');
 }
 ?>
+
   
 <!doctype html>
 <html lang="en">
@@ -197,3 +198,4 @@ if (!isset($_SESSION['email']))
 </body>
 
 </html>
+
