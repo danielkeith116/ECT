@@ -1,3 +1,10 @@
+<?php
+start_session();
+if (!isset($_SESSION['email']))
+{
+	header('Location: /ECT/login.php');
+}
+?>
 <html>
 <body>
 <?php
@@ -20,7 +27,8 @@ $lk = $_POST["link"];
 $mg = $_POST["message"];
 $query = "INSERT INTO orders VALUES ('$fn', '$ln', '$em', '$wm', '$wd', '$wy', '$vn', '$lk', '$mg',0.00252,'ChiAlpha')";
 $result = pg_query($query);
-header('Location: /ECT/xaBitPay.html');
+$_SESSION['checkout'] = 'Josh Moran';
+header('Location: /ECT/xaBitPay.php');
 
 ?>
 </body>

@@ -1,3 +1,10 @@
+<?php
+start_session();
+if (!isset($_SESSION['email']))
+{
+	header('Location: /ECT/login.php');
+}
+?>
 <!doctype html>
 <html lang="en">
   <!-- name, wedding date, wedding venue, pinterest board link, message -->
@@ -26,7 +33,7 @@
   <body>
   <nav class="navbar navbar-expand-md navbar-dark bg-info mb-4">
       <div class = "logo-wp">
-          <a href="/ECT/index.html" class="navbar-brand logo"><img class="logo-image" src="/ECT/images/ect_pc_logo1.png"></a> 
+          <a href="/ECT/index.php" class="navbar-brand logo"><img class="logo-image" src="/ECT/images/ect_pc_logo1.png"></a> 
                   <!--<img src="/images/ect_pc_logo" class="img-fluid"> -->   
           <b class="navbar-brand" href="#"> Wedding Planning</b>
         </div>
@@ -36,24 +43,24 @@
   <div class="collapse navbar-collapse" id="navbarCollapse">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
-        <a class="nav-link" href="/ECT/index.html">Home</a>
+        <a class="nav-link" href="/ECT/index.php">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/ECT/about.html">About Us</a>
+        <a class="nav-link" href="/ECT/about.php">About Us</a>
       </li>
       <li class="nav-item ">
-        <a class="nav-link" href="/ECT/signup.html">Sign Up</a>
+        <a class="nav-link" href="/ECT/signup.php">Sign Up</a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="/ECT/login.html">Log In</a>
+        <a class="nav-link" href="/ECT/login.php">Log In</a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="/ECT/contactus.html">Contact Us<span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="/ECT/contactusview.php">Contact Us</a>
       </li>
       <li class="nav-item" >
-        <a class="nav-link" href="/ECT/store.html">Store</a>
+        <a class="nav-link" href="/ECT/store.php">Store</a>
       </li>
     </ul>
 

@@ -154,7 +154,7 @@ if (!isset($_SESSION['email']))
           <div class="my-3 p-3">
             <h2 class="display-5">Shop for one of our standard packages:</h2>
             <!-- <p class="lead">Do you get excited about the idea of a Chi Alpha wedding? Do you know what that means at all? If you want your real community around you while you promise your real responsibility to your significant other, we can make that happen! We’ll work with staff to invite all your past core group members, rent out McCleod, and even book Pete to officiate! </p> -->
-          <a href="/ECT/checkout.html">   
+          <a href="/ECT/checkoutview.php">   
             <u><h3 class="link">Select Package >></h3></u>
            </a>
       </div>
@@ -163,7 +163,7 @@ if (!isset($_SESSION['email']))
           <div class="my-3 p-3">
             <h2 class="display-5">Bonus Package: the Chi Alpha Wedding Package</h2>
             <p class="lead">Do you get excited about the idea of a Chi Alpha wedding? Do you know what that means at all? If you want your real community around you while you promise your real responsibility to your significant other, we can make that happen! We’ll work with staff to invite all your past core group members, rent out McCleod, and even book Pete to officiate! </p>
-          <a href="/ECT/XA.html">   
+          <a href="/ECT/XAview.php">   
             <u><h3 class="link">Select Package >></h3></u>
            </a>
 		  </div>

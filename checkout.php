@@ -1,3 +1,10 @@
+<?php
+start_session();
+if (!isset($_SESSION['email']))
+{
+	header('Location: /ECT/login.php');
+}
+?>
 <html>
 <body>
 <?php
@@ -21,24 +28,25 @@ $lk = $_POST["link"];
 $mg = $_POST["message"];
 
 $pr = 0;
-$redirect = 'Location: /ECT/index.html';
+$redirect = 'Location: /ECT/index.php';
 if ($wp == "All In")
 {
     $pr = 0.003;
-    $redirect = 'Location: /ECT/allBitPay.html';
+    $redirect = 'Location: /ECT/allBitPay.php';
 }
 if ($wp == "Halfway")
 {
     $pr = 0.002;
-    $redirect = 'Location: /ECT/halfBitPay.html';
+    $redirect = 'Location: /ECT/halfBitPay.php';
 }
 if ($wp == "11th Hour")
 {
     $pr = 0.001;
-    $redirect = 'Location: /ECT/11BitPay.html';
+    $redirect = 'Location: /ECT/11BitPay.php';
 }
 $query = "INSERT INTO orders VALUES ('$fn', '$ln', '$em', '$wm', '$wd', '$wy', '$vn', '$lk', '$mg','$pr','$wp')";
 $result = pg_query($query);
+$_SESSION['checkout'] = 'Supreme Leader';
 header($redirect);
 
 ?>

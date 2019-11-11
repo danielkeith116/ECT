@@ -1,3 +1,14 @@
+﻿<?php
+start_session();
+if (!isset($_SESSION['email']))
+{
+	header('Location: /ECT/login.php');
+}
+elseif (!isset($_SESSION['checkout']))
+{
+	header('Location: /ECT/store.php');
+}
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -101,7 +112,7 @@
 <form action="https://test.bitpay.com/checkout" method="post">
   <input type="hidden" name="action" value="checkout" />
   <input type="hidden" name="posData" value="" />
-  <input type="hidden" name="data" value="LcMQ+N889ZKtLL7wQHdhcEmW5naVjm0O2/Vh42oO0xWDXgGe2C6yjQLbBLFC5VBmBSLseERWW9dbAJPZmtVcPp3xz2u6SlqLfM8gTuczudMR+QBEhf8jEW0VBAfUJICIlkjsXPOUhta8Rm9Q4IgT9wrabTkL4ldaG1L56idTOGND6HwnOeMH9FA3iuascYebXVmmQ13dwiRBltgQHshQ5g==" />
+  <input type="hidden" name="data" value="LcMQ+N889ZKtLL7wQHdhcEmW5naVjm0O2/Vh42oO0xWDXgGe2C6yjQLbBLFC5VBmIDCuA6HHC+MuhFmswLsS/dsdAyFY0Q/pzpWVSGT6c2Fp8B+zg5qGWSXKunlWy0WMSJFPNS0WrdJLgDZ5ylmv2keyYzqkdl2plcHNEz0wZl2VC5CToAaWU0iAPnmtCsJusihXUomHbb0wqKNh6HR4vQ==" />
   <input type="image" src="https://test.bitpay.com/cdn/en_US/bp-btn-pay-currencies.svg" name="submit" style="width: 210px" alt="BitPay, the easy way to pay with bitcoins.">
 </form>
 
