@@ -136,9 +136,9 @@ if (!isset($_SESSION['email']))
     <div class="form-label-group d-flex justify-content-center">
         <div class="col-xs-2 w-50">
           <label for="inputName">Name*</label>
-          <input type="text" name="fName" id="inputFirstName" class="form-control" placeholder="First Name" pattern="[A-Za-z]*" title="Please enter only letters" required autofocus>
+          <input type="text" name="fName" id="inputFirstName" class="form-control" placeholder="First Name" pattern="[A-Za-z '\-]*" title="Please enter only letters, spaces, dashes, or apostrophes" required autofocus>
             <br>
-          <input type="text" name="lName" id="inputLastName" class="form-control" placeholder="Last Name" pattern="[A-Za-z]*" title="Please enter only letters" required autofocus>
+          <input type="text" name="lName" id="inputLastName" class="form-control" placeholder="Last Name" pattern="[A-Za-z '\-]*" title="Please enter only letters, spaces, or dashes" required autofocus>
         </div>
       </div>
         <br>
