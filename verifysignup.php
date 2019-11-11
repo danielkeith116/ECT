@@ -60,7 +60,7 @@ else
 {
 	session_unset();
 	session_destroy();
-	header('Location: /ECT/failure.html');
+	header('Location: /ECT/failure.php');
 }
 
 ?>

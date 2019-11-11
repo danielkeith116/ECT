@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -61,7 +64,7 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/product.css" rel="stylesheet">
   </head>
   <body>
-  <nav class="navbar navbar-expand-md navbar-dark bg-info mb-4">
+        <nav class="navbar navbar-expand-md navbar-dark bg-info mb-4">
       <div class = "logo-wp">
           <a href="/ECT/index.html" class="navbar-brand logo"><img class="logo-image" src="/ECT/images/ect_pc_logo1.png"></a> 
                   <!--<img src="/images/ect_pc_logo" class="img-fluid"> -->   
@@ -73,25 +76,38 @@
   <div class="collapse navbar-collapse" id="navbarCollapse">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
-        <a class="nav-link" href="/ECT/index.html">Home</a>
+        <a class="nav-link" href="/ECT/index.php">Home</a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="/ECT/about.html">About Us<span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="/ECT/about.php">About Us<span class="sr-only">(current)</span></a>
+      </li>
+	  <li class="nav-item">
+        <a class="nav-link" href="/ECT/store.php">Store</a>
+      </li>
+	  <?php if (isset($_SESSION['email'])) : ?>
+        <li class="nav-item">
+        <a class="nav-link" href="/ECT/memberHome.php">Member Home</a>
+        </li>
+		<?php endif; ?>
+	  <li class="nav-item">
+        <a class="nav-link" href="/ECT/contactusview.php">Contact Us</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/ECT/signup.php">Sign Up</a>
       </li>
       </li>
-      <li class="nav-item">
+      <?php if (!isset($_SESSION['email'])) : ?>
+        <li class="nav-item">
         <a class="nav-link" href="/ECT/login.php">Log In</a>
+        </li>
+		<?php else : ?>
+		<li class="nav-item">
+        <a class="nav-link" href="/ECT/login.php">Log Out</a>
+        </li>
+		<?php endif; ?>
       </li>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/ECT/contactus.html">Contact Us</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/ECT/store.php">Store</a>
-      </li>
+      
+      
     </ul>
 
   </div>

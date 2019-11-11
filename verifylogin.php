@@ -21,7 +21,7 @@ $rows = pg_fetch_row($result);
 if (!$rows)
 {
 	session_destroy();
-	header('Location: /ECT/loginfailureemail.html');
+	header('Location: /ECT/loginfailureemail.php');
 	
 }
 else 
@@ -36,7 +36,7 @@ else
 	{
 		session_unset();
 		session_destroy();
-		header('Location: /ECT/loginfailurepassword.html'); 
+		header('Location: /ECT/loginfailurepassword.php'); 
 	} 
 }
 

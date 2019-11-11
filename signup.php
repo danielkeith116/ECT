@@ -30,9 +30,8 @@ if (isset($_SESSION['email']))
       }
     </style>
   <body>
-  <nav class="navbar navbar-expand-md navbar-dark bg-info mb-4">
+        <nav class="navbar navbar-expand-md navbar-dark bg-info mb-4">
       <div class = "logo-wp">
-          <!-- <a href="#" class="navbar-brand logo"><img class="logo-image" src="/ECT/images/ect_pc_logo1.png"></a> -->
           <a href="/ECT/index.html" class="navbar-brand logo"><img class="logo-image" src="/ECT/images/ect_pc_logo1.png"></a> 
                   <!--<img src="/images/ect_pc_logo" class="img-fluid"> -->   
           <b class="navbar-brand" href="#"> Wedding Planning</b>
@@ -43,29 +42,42 @@ if (isset($_SESSION['email']))
   <div class="collapse navbar-collapse" id="navbarCollapse">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
-        <a class="nav-link" href="/ECT/index.html">Home</a>
+        <a class="nav-link" href="/ECT/index.php">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/ECT/about.html">About Us</a>
+        <a class="nav-link" href="/ECT/about.php">About Us</a>
       </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="/ECT/signup.php">Sign Up</a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link" href="/ECT/login.php">Log In</a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link" href="/ECT/contactus.html">Contact Us<span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
+	  <li class="nav-item">
         <a class="nav-link" href="/ECT/store.php">Store</a>
       </li>
+	  <?php if (isset($_SESSION['email'])) : ?>
+        <li class="nav-item">
+        <a class="nav-link" href="/ECT/memberHome.php">Member Home</a>
+        </li>
+		<?php endif; ?>
+	  <li class="nav-item">
+        <a class="nav-link" href="/ECT/contactusview.php">Contact Us</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/ECT/signup.php">Sign Up<span class="sr-only">(current)</span></a>
+      </li>
+      </li>
+      <?php if (!isset($_SESSION['email'])) : ?>
+        <li class="nav-item">
+        <a class="nav-link" href="/ECT/login.php">Log In</a>
+        </li>
+		<?php else : ?>
+		<li class="nav-item">
+        <a class="nav-link" href="/ECT/login.php">Log Out</a>
+        </li>
+		<?php endif; ?>
+      </li>
+      
+      
     </ul>
 
   </div>
-  </nav>
+</nav>
 <form class="form-signup" action="verifysignup.php" method="post">
   <div class="text-center mb-4">
     <img clas s="mb-4" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
