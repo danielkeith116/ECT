@@ -112,7 +112,7 @@ elseif (!isset($_SESSION['checkout']))
 <form action="https://test.bitpay.com/checkout" method="post">
   <input type="hidden" name="action" value="checkout" />
   <input type="hidden" name="posData" value="" />
-  <input type="hidden" name="data" value="LcMQ+N889ZKtLL7wQHdhcEmW5naVjm0O2/Vh42oO0xWDXgGe2C6yjQLbBLFC5VBmBSLseERWW9dbAJPZmtVcPp3xz2u6SlqLfM8gTuczudMR+QBEhf8jEW0VBAfUJICIlkjsXPOUhta8Rm9Q4IgT9wrabTkL4ldaG1L56idTOGND6HwnOeMH9FA3iuascYebXVmmQ13dwiRBltgQHshQ5g==" />
+  <input type="hidden" name="data" value="LcMQ+N889ZKtLL7wQHdhcEmW5naVjm0O2/Vh42oO0xWDXgGe2C6yjQLbBLFC5VBmHYXqxqYmBQzbb2zrBBQaCJuXvDQaCNQ/9xca7Uxq72u2NUbbU5hWzH5uIqTDxpf12M5ky5ZHUpDho3Irghr5TSMw4KN3Xiq9epaE1HuxmOsL8tj1ZZ6U/zW20aEYv5D9cW6ats3p5MkukvCw2wIb7A==" />
   <input type="image" src="https://test.bitpay.com/cdn/en_US/bp-btn-pay-currencies.svg" name="submit" style="width: 210px" alt="BitPay, the easy way to pay with bitcoins.">
 </form>
 
