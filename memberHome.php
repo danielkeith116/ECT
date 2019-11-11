@@ -85,7 +85,7 @@ if (!isset($_SESSION['email']))
   </div>
 </nav>
 <div class="position-relative overflow-hidden text-center">
-  <div class="col-md-5 p-lg-5 mx-auto my-5">
+  <div class="col-md-7  mx-auto ">
     <h1>See our most recent wedding's blog post!</h1>
     <p class="lead">It was such a joy to be a part of Charlotte and Clay's special day as they are dear friends of ours.
             They met each other on a mission trip in Turkey, and will return to be missionaires there for the next few
