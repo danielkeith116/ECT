@@ -36,7 +36,7 @@ if (!isset($_SESSION['email']))
     </style>
 
 <body>
-        <nav class="navbar navbar-expand-md navbar-dark bg-info mb-4">
+        <nav class="navbar navbar-expand-md navbar-dark bg-info ">
       <div class = "logo-wp">
           <a href="/ECT/index.php" class="navbar-brand logo"><img class="logo-image" src="/ECT/images/ect_pc_logo1.png"></a> 
                   <!--<img src="/images/ect_pc_logo" class="img-fluid"> -->   
@@ -84,9 +84,10 @@ if (!isset($_SESSION['email']))
 
   </div>
 </nav>
-    <div class="text-center flex justify-content-center w-75 ">
-        <h1>See our most recent wedding's blog post!</h1>
-        <p>It was such a joy to be a part of Charlotte and Clay's speical day as they are dear friends of ours.
+<div class="position-relative overflow-hidden text-center">
+  <div class="col-md-5 p-lg-5 mx-auto my-5">
+    <h1>See our most recent wedding's blog post!</h1>
+    <p class="lead">It was such a joy to be a part of Charlotte and Clay's special day as they are dear friends of ours.
             They met each other on a mission trip in Turkey, and will return to be missionaires there for the next few
             years!
             <br>
@@ -99,6 +100,8 @@ if (!isset($_SESSION['email']))
             <br>
             -The Persistent Cookies
         </p>
+  </div>
+ 
         <section class="cid-qvbazpicKQ" id="image4-7l" data-rv-view="4322">
             <!-- Block parameters controls (Blue "Gear" panel) -->
 
@@ -114,7 +117,7 @@ if (!isset($_SESSION['email']))
                             </h4>
                         </div>
                     </div>
-                    <div class="img-item">
+                    <div class="img-item item1" style="width: 123%;">
                         <img src="/ECT/images/members/5.jpg" style="width:500px;" alt="" title="" media-simple="true">
                         <div class="img-caption">
                             <h4 class="mbr-fonts-style align-center mbr-black display-7">
@@ -122,7 +125,7 @@ if (!isset($_SESSION['email']))
                             </h4>
                         </div>
                     </div>
-                    <div class="img-item">
+                    <div class="img-item item1" style="width: 123%;">
                         <img src="/ECT/images/members/7.jpg" style="width:500px;" alt="" title="" media-simple="true">
                         <div class="img-caption">
                             <h4 class="mbr-fonts-style align-center mbr-black display-7">
@@ -130,7 +133,7 @@ if (!isset($_SESSION['email']))
                             </h4>
                         </div>
                     </div>
-                    <div class="img-item">
+                    <div class="img-item item1" style="width: 123%;">
                         <img src="/ECT/images/members/21.jpg" style="width:500px;" alt="" title="" media-simple="true">
                         <div class="img-caption">
                             <h4 class="mbr-fonts-style align-center mbr-black display-7">
@@ -138,7 +141,7 @@ if (!isset($_SESSION['email']))
                             </h4>
                         </div>
                     </div>
-                    <div class="img-item">
+                    <div class="img-item item1" style="width: 123%;">
                         <img src="/ECT/images/members/43.jpg" style="width:500px;" alt="" title="" media-simple="true">
                         <div class="img-caption">
                             <h4 class="mbr-fonts-style align-center mbr-black display-7">
@@ -146,7 +149,7 @@ if (!isset($_SESSION['email']))
                             </h4>
                         </div>
                     </div>
-                    <div class="img-item">
+                    <div class="img-item item1" style="width: 123%;">
                         <img src="/ECT/images/members/44.jpg" style="width:500px;" alt="" title="" media-simple="true">
                         <div class="img-caption">
                             <h4 class="mbr-fonts-style align-center mbr-black display-7">
@@ -154,7 +157,7 @@ if (!isset($_SESSION['email']))
                             </h4>
                         </div>
                     </div>
-                    <div class="img-item">
+                    <div class="img-item item1" style="width: 123%;">
                         <img src="/ECT/images/members/46.jpg" style="width:500px;" alt="" title="" media-simple="true">
                         <div class="img-caption">
                             <h4 class="mbr-fonts-style align-center mbr-black display-7">
@@ -162,7 +165,7 @@ if (!isset($_SESSION['email']))
                             </h4>
                         </div>
                     </div>
-                    <div class="img-item">
+                    <div class="img-item item1" style="width: 123%;">
                         <img src="/ECT/images/members/78.jpg" style="width:500px;" alt="" title="" media-simple="true">
                         <div class="img-caption">
                             <h4 class="mbr-fonts-style align-center mbr-black display-7">
@@ -170,7 +173,7 @@ if (!isset($_SESSION['email']))
                             </h4>
                         </div>
                     </div>
-                    <div class="img-item">
+                    <div class="img-item item1" style="width: 123%;">
                         <img src="/ECT/images/members/54.jpg" style="width:500px;" alt="" title="" media-simple="true">
                         <div class="img-caption">
                             <h4 class="mbr-fonts-style align-center mbr-black display-7">
