@@ -49,24 +49,37 @@ if (!isset($_SESSION['email']))
       <li class="nav-item">
         <a class="nav-link" href="/ECT/about.php">About Us</a>
       </li>
-      <li class="nav-item ">
-        <a class="nav-link" href="/ECT/signup.php">Sign Up</a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link" href="/ECT/login.php">Log In</a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link" href="/ECT/contactusview.php">Contact Us</a>
-      </li>
-      <li class="nav-item" >
+	  <li class="nav-item">
         <a class="nav-link" href="/ECT/store.php">Store</a>
       </li>
+	  <?php if (isset($_SESSION['email'])) : ?>
+        <li class="nav-item">
+        <a class="nav-link" href="/ECT/memberHome.php">Member Home</a>
+        </li>
+		<?php endif; ?>
+	  <li class="nav-item">
+        <a class="nav-link" href="/ECT/contactusview.php">Contact Us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/ECT/signup.php">Sign Up</a>
+      </li>
+      </li>
+      <?php if (!isset($_SESSION['email'])) : ?>
+        <li class="nav-item">
+        <a class="nav-link" href="/ECT/login.php">Log In</a>
+        </li>
+		<?php else : ?>
+		<li class="nav-item">
+        <a class="nav-link" href="/ECT/login.php">Log Out</a>
+        </li>
+		<?php endif; ?>
+      </li>
+      
+      
     </ul>
 
   </div>
-  </nav>
+</nav>
 <form class="form-signup" action="xa.php" method="post">
   <div class="text-center mb-4">
     <img clas s="mb-4" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
