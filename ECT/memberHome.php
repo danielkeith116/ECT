@@ -33,6 +33,15 @@ if (!isset($_SESSION['email']))
             font-family: 'Lobster';
             color: rgb(23, 162, 184);
         }
+		.xa {
+      background-color: rgba(205, 92, 92, 0.5);
+	  font-family: 'Lobster';
+	  border: 2px solid black;
+		}
+
+	  .pad {
+		  padding-top: 8px;
+	  }
     </style>
 
 <body>
@@ -84,6 +93,11 @@ if (!isset($_SESSION['email']))
 
   </div>
 </nav>
+
+<div class="pad">
+<p><a class="btn-lg xa text-white" href="/ECT/login.php" role="button">Log Out</a></p>
+</div>
+
 <div class="position-relative overflow-hidden text-center">
   <div class="col-md-7  mx-auto ">
     <h1>See our most recent wedding's blog post!</h1>
