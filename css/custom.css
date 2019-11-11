@@ -1,0 +1,43 @@
+body {
+    background-image: url("/ECT/images/table_wedding3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.navbar-brand {
+    padding: 0px; /* firefox bug fix */     
+    margin-right: 0px !important;
+  }
+.navbar-brand>img {
+  height: 100%;
+  padding: 1px; /* firefox bug fix */
+  width: auto;
+}
+
+.navbar-brand .logo-image{
+  width: 73px;
+  height: 50px;
+  border-radius: 0%;
+  overflow: hidden;
+  margin-top: 0px;
+}
+
+.logo-wp {
+  margin-right: 1rem;
+}
+
+.hbouquet{
+content: url("/ECT/images/homebouquet.webp");
+width: 30%;
+height: 30%;
+float: left;
+margin-bottom: 45px;
+}
+
+.hwedding{
+content: url("/ECT/images/homewedding.jpg");
+width: 45%;
+height: 45%;
+margin-left: auto;
+margin-bottom: 45px;
+float: right;
+}

@@ -1,0 +1,21 @@
+.navbar-brand {
+    padding: 0px; /* firefox bug fix */     
+    margin-right: 0px !important;
+  }
+  .navbar-brand>img {
+  height: 100%;
+  padding: 1px; /* firefox bug fix */
+  width: auto;
+  }
+  
+  .navbar-brand .logo-image{
+    width: 73px;
+    height: 50px;
+    border-radius: 0%;
+    overflow: hidden;
+    margin-top: 0px;
+  }
+  
+  .logo-wp {
+  margin-right: 1rem;
+  }
