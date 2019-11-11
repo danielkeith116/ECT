@@ -1,4 +1,6 @@
-
+<?php
+session_start();
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -47,37 +49,50 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/floating-labels.css" rel="stylesheet">
   </head>
   <body>
-    <nav class="navbar navbar-expand-md navbar-dark bg-info mb-4">
-        <div class = "logo-wp">
-            <a href="/ECT/index.html" class="navbar-brand logo"><img class="logo-image" src="/ECT/images/ect_pc_logo1.png"></a> 
-                    <!--<img src="/images/ect_pc_logo" class="img-fluid"> -->   
-            <b class="navbar-brand" href="#"> Wedding Planning</b>
-          </div>
+        <nav class="navbar navbar-expand-md navbar-dark bg-info mb-4">
+      <div class = "logo-wp">
+          <a href="/ECT/index.html" class="navbar-brand logo"><img class="logo-image" src="/ECT/images/ect_pc_logo1.png"></a> 
+                  <!--<img src="/images/ect_pc_logo" class="img-fluid"> -->   
+          <b class="navbar-brand" href="#"> Wedding Planning</b>
+        </div>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarCollapse">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
-        <a class="nav-link" href="/ECT/index.html">Home</a>
+        <a class="nav-link" href="/ECT/index.php">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/ECT/about.html">About Us</a>
+        <a class="nav-link" href="/ECT/about.php">About Us</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/ECT/signup.html">Sign Up</a>
-      </li>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="/ECT/login.html">Log In<span class="sr-only">(current)</span></a>
-      </li>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/ECT/contactus.html">Contact Us</a>
-      </li>
-      <li class="nav-item">
+	  <li class="nav-item">
         <a class="nav-link" href="/ECT/store.php">Store</a>
       </li>
+	  <?php if (isset($_SESSION['email'])) : ?>
+        <li class="nav-item">
+        <a class="nav-link" href="/ECT/memberHome.php">Member Home</a>
+        </li>
+		<?php endif; ?>
+	  <li class="nav-item">
+        <a class="nav-link" href="/ECT/contactusview.php">Contact Us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/ECT/signup.php">Sign Up</a>
+      </li>
+      </li>
+      <?php if (!isset($_SESSION['email'])) : ?>
+        <li class="nav-item active">
+        <a class="nav-link" href="/ECT/login.php">Log In<span class="sr-only">(current)</span></a>
+        </li>
+		<?php else : ?>
+		<li class="nav-item">
+        <a class="nav-link" href="/ECT/login.php">Log Out</a>
+        </li>
+		<?php endif; ?>
+      </li>
+      
+      
     </ul>
 
   </div>
@@ -85,9 +100,9 @@
     
   <div class="text-center mb-4">
     <img class="mb-4" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
-    <h1 class="h3 mb-3 warn font-weight-normal">Incorrect Password, Please Try Again</h1>
+    <h1 class="h3 mb-3 warn font-weight-normal">That Email Address does not exist, Please Try Again</h1>
   </div>
-<form class="form-signin" action="login.php" method="post">
+<form class="form-signin" action="verifylogin.php" method="post">
   <div class="form-label-group d-flex justify-content-center">
     <div class="col-xs-2 w-50">
       <label for="email">Email address</label>

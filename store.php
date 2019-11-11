@@ -2,7 +2,7 @@
 session_start();
 if (!isset($_SESSION['email']))
 {	
-	header('Location: /ECT/login.html');
+	header('Location: /ECT/login.php');
 }
 ?>
 <html lang="en">
@@ -70,44 +70,54 @@ if (!isset($_SESSION['email']))
       }
     </style>
   <body>
-  <nav class="navbar navbar-expand-md navbar-dark bg-info mb-4">
+        <nav class="navbar navbar-expand-md navbar-dark bg-info mb-4">
       <div class = "logo-wp">
           <a href="/ECT/index.html" class="navbar-brand logo"><img class="logo-image" src="/ECT/images/ect_pc_logo1.png"></a> 
                   <!--<img src="/images/ect_pc_logo" class="img-fluid"> -->   
           <b class="navbar-brand" href="#"> Wedding Planning</b>
         </div>
-
-        
-  <!-- NAV BAR MOBILE -->
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarCollapse">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
-        <a class="nav-link" href="/ECT/index.html">Home</a>
+        <a class="nav-link" href="/ECT/index.php">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/ECT/about.html">About Us</a>
+        <a class="nav-link" href="/ECT/about.php">About Us</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/ECT/signup.html">Sign Up</a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link" href="/ECT/login.html">Log In</a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link" href="/ECT/contactus.html">Contact Us</a>
-      </li>
-      <li class="nav-item active">
+	  <li class="nav-item active">
         <a class="nav-link" href="/ECT/store.php">Store<span class="sr-only">(current)</span></a>
       </li>
+	  <?php if (isset($_SESSION['email'])) : ?>
+        <li class="nav-item">
+        <a class="nav-link" href="/ECT/memberHome.php">Member Home</a>
+        </li>
+		<?php endif; ?>
+	  <li class="nav-item">
+        <a class="nav-link" href="/ECT/contactusview.php">Contact Us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/ECT/signup.php">Sign Up</a>
+      </li>
+      </li>
+      <?php if (!isset($_SESSION['email'])) : ?>
+        <li class="nav-item">
+        <a class="nav-link" href="/ECT/login.php">Log In</a>
+        </li>
+		<?php else : ?>
+		<li class="nav-item">
+        <a class="nav-link" href="/ECT/login.php">Log Out</a>
+        </li>
+		<?php endif; ?>
+      </li>
+      
+      
     </ul>
 
   </div>
-  </nav>
+</nav>
 
     <div class=" text-center">
           <h1 class="display-4 font-weight-normal" style="color: rgba(205, 92, 92, 0.5)">Purchase One of Our Wedding Planning Packages</h1>
