@@ -2,7 +2,7 @@
 session_start();
 if (!isset($_SESSION['email']))
 {	
-	header('Location: /ECT/login.html');
+	header('Location: /ECT/login.php');
 }
 ?>
 <html lang="en">
@@ -91,11 +91,11 @@ if (!isset($_SESSION['email']))
         <a class="nav-link" href="/ECT/about.html">About Us</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/ECT/signup.html">Sign Up</a>
+        <a class="nav-link" href="/ECT/signup.php">Sign Up</a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="/ECT/login.html">Log In</a>
+        <a class="nav-link" href="/ECT/login.php">Log In</a>
       </li>
 
       <li class="nav-item">
@@ -119,9 +119,7 @@ if (!isset($_SESSION['email']))
             <h2 class="display-5">1: All In</h2>
             <p class="lead">Our full planning package, all the way from “I’m down” to “I do!” Includes venue, decorations, invitations, rentals, catering, cake, flowers, and anything else you might need to make your day special.</p>
             <br>
-            <a href="/ECT/allin.html">
-            <u><h3 class="link">Select Package >></h3></u>
-            </a>
+            
           </div>
       
         </div>
@@ -129,9 +127,7 @@ if (!isset($_SESSION['email']))
           <div class="my-3 p-3">
             <h2 class="display-5">2. Halfway There</h2>
             <p class="lead">Our partial package, perfect if you want to make the big decisions yourself but need someone to wrestle the devil in the details and the logistics.</p>
-            <a href="/ECT/halfway.html">
-            <h3 class="link"><u>Select Package >></u></h3>
-            </a>
+            
           </div>
         </div>
         <div class="turq mr-md-3 w-33 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
@@ -139,14 +135,20 @@ if (!isset($_SESSION['email']))
             <h2 class="display-5">3. Eleventh Hour</h2>
             <p class="lead">Our day-of, down-to-busines package for when you’ve done the bulk of the prep yourself but want someone around to take care of all the things necessary for the big day itself.</p>
             <br>
-            <a href="/ECT/11thHour.html">
-            <u><h3 class="link">Select Package >></h3></u>
-            </a>
+            
           </div>
       
         </div>
       </div>
-      
+      <div class="dimgray d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
+          <div class="my-3 p-3">
+            <h2 class="display-5">Shop for one of our standard packages:</h2>
+            <!-- <p class="lead">Do you get excited about the idea of a Chi Alpha wedding? Do you know what that means at all? If you want your real community around you while you promise your real responsibility to your significant other, we can make that happen! We’ll work with staff to invite all your past core group members, rent out McCleod, and even book Pete to officiate! </p> -->
+          <a href="/ECT/checkout.html">   
+            <u><h3 class="link">Select Package >></h3></u>
+           </a>
+      </div>
+    </div>
       <div class="xa d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
           <div class="my-3 p-3">
             <h2 class="display-5">Bonus Package: the Chi Alpha Wedding Package</h2>
