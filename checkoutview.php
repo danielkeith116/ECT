@@ -1,4 +1,11 @@
-﻿<!doctype html>
+﻿<?php
+session_start();
+if (!isset($_SESSION['email']))
+{
+	header('Location: /ECT/login.php');
+}
+?>
+<!doctype html>
 <html lang="en">
   <!-- name, wedding date, wedding venue, pinterest board link, message -->
   <head>
@@ -37,24 +44,24 @@
   <div class="collapse navbar-collapse" id="navbarCollapse">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
-        <a class="nav-link" href="/ECT/index.html">Home</a>
+        <a class="nav-link" href="/ECT/index.php">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/ECT/about.html">About Us</a>
+        <a class="nav-link" href="/ECT/about.php">About Us</a>
       </li>
       <li class="nav-item ">
-        <a class="nav-link" href="/ECT/signup.html">Sign Up</a>
+        <a class="nav-link" href="/ECT/signup.php">Sign Up</a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="/ECT/login.html">Log In</a>
+        <a class="nav-link" href="/ECT/login.php">Log In</a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="/ECT/contactus.html">Contact Us<span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="/ECT/contactusview.php">Contact Us</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/ECT/store.html">Store</a>
+      <li class="nav-item active">
+        <a class="nav-link" href="/ECT/store.php">Store</a>
       </li>
     </ul>
 
