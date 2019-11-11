@@ -46,7 +46,7 @@ if(!$mail->send()) {
   echo 'Message was not sent.';
   echo 'Mailer error: ' . $mail->ErrorInfo;
 } else {
-  header('Location: /ECT/contactus.html');
+  header('Location: /ECT/contactusview.php');
 }
 ?>
 </body>

@@ -84,7 +84,7 @@ session_start();
   <div class="form-label-group d-flex justify-content-center">
     <div class="col-xs-2 w-50">
       <label for="inputName">Name</label>
-      <input type="name" name="inputName" id="inputName" class="form-control" placeholder="Name" required autofocus>
+      <input type="name" name="inputName" id="inputName" class="form-control" placeholder="Name" pattern="[A-Za-z '\-]*" title="Please enter only letters, spaces, dashes, or apostrophes" required autofocus>
     </div>
   </div>
 
