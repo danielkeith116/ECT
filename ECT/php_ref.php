@@ -115,7 +115,7 @@ $rows = pg_fetch_row($result);
 if (!$rows)
 {
 	//THIS COMMAND RESETS ALL SESSION VARIABLES
-	session_unregister();
+	session_unset();
 	
 	//THIS COMMAND DELETES A SESSION
 	session_destroy();
@@ -141,7 +141,7 @@ else
 	}
 	else
 	{
-		session_unregister();
+		session_unset();
 		session_destroy();
 		header('Location: /ECT/failure.html');
 	} 
