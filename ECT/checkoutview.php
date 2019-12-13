@@ -93,7 +93,7 @@ if (!isset($_SESSION['email']))
     <hr>
     <h6>Halfway There: Our partial package, perfect if you want to make the big decisions yourself <br> but need someone to plan details and the logistics.</h6>
     <hr>
-    <h6>Eleventh Hour: Our day-of, down-to-busines package for when you’ve done the bulk of the prep yourself but want someone around to take care of all the things necessary for the big day itself.</h6>
+    <h6>Eleventh Hour: Our day-of, down-to-business package for when you’ve done the bulk of the prep yourself but want someone around to take care of all the things necessary for the big day itself.</h6>
     <hr>
         </div>
 </div>
