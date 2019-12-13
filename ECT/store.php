@@ -143,7 +143,7 @@ if (!isset($_SESSION['email']))
         <div class="turq mr-md-3 w-33 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
           <div class="my-3 py-3">
             <h2 class="display-5">3. Eleventh Hour</h2>
-            <p class="lead">Our day-of, down-to-busines package for when you’ve done the bulk of the prep yourself but want someone around to take care of all the things necessary for the big day itself.</p>
+            <p class="lead">Our day-of, down-to-business package for when you’ve done the bulk of the prep yourself but want someone around to take care of all the things necessary for the big day itself.</p>
             <br>
             
           </div>
