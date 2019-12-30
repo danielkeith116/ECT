@@ -1,7 +1,7 @@
 # Persistent Cookies Wedding Planning
 ### Authors: Caroline Ehler, Daniel Keith, and Elizabeth Shelton 
 
-### Heroku link: https://pc-wedding-planning.herokuapp.com/index.php
+### Heroku link: https://pc-wedding-planning.herokuapp.com/ECT/index.php
 ##### NOTE: If this link doesn't work, the Heroku deploy has probably expired; contact one of the contributors if you would like to view the website and we'll deploy it again
 #
 
